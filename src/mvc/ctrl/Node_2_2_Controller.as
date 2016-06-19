@@ -49,39 +49,51 @@ package mvc.ctrl
 		private function validSum():String
 		{
 			// берем число из модели
-			var string:String = _model.text;
+			var str:String = _model.text;
 			// ищем запятую
-			var index:int = string.indexOf(",");
+			var index:int = str.indexOf(",");
 			// если запятая найдена
 			if(index != -1){
 				// разбиваем число до заятой и после в массив
-				strArray = string.split(",");
+				strArray = str.split(",");
 				subStr = valid(strArray[0]);
 				subStr += ",";
 				subStr += strArray[1];
 			}else{
-				subStr = valid(string);
+				subStr = valid(str);
 			}
 			
 			function valid(str:String):String
 			{
+				var string:String;
+				
 				if(str.length > 7){
-					return str.slice(0, 7);
-				}else{
-					return str;
+					string = str.slice(0, 7);
 				}
 				
 				if(str.length == 4){
-					subStr = str.slice(0, 1);
-					subStr += " ";
-					subStr += str.slice(1);
+					string = str.slice(0, 1);
+					string += " ";
+					string += str.slice(1);
 				}else if(str.length == 5){
-					
+					string = str.slice(0, 2);
+					string += " ";
+					string += str.slice(2);
 				}else if(str.length == 6){
-					
+					string = str.slice(0, 3);
+					string += " ";
+					string += str.slice(3);
 				}else if(str.length == 7){
-					
+					string = str.slice(0, 1);
+					string += " ";
+					string += str.slice(1, 4);
+					string += " ";
+					string += str.slice(4);
+				}else{
+					string = str;
 				}
+				
+				return string;
 			}
 			
 			return subStr;
