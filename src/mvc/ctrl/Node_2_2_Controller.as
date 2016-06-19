@@ -71,16 +71,17 @@ package mvc.ctrl
 					return str;
 				}
 				
-				// Здесь вставляем пробелы между цыфрами если число длинее 7,6,5,4 символов
-				/*if(str.length == 4){
-					
+				if(str.length == 4){
+					subStr = str.slice(0, 1);
+					subStr += " ";
+					subStr += str.slice(1);
 				}else if(str.length == 5){
 					
 				}else if(str.length == 6){
 					
 				}else if(str.length == 7){
 					
-				}*/
+				}
 			}
 			
 			return subStr;
