@@ -1,0 +1,6 @@
+#Ignore list
+
+.settings/
+bin-debug/
+.actionScriptProperties
+.project
