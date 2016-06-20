@@ -65,23 +65,35 @@ package mvc.ctrl
 			
 			function valid(str:String):String
 			{
+				var string:String;
+				
 				if(str.length > 7){
-					return str.slice(0, 7);
-				}else{
-					return str;
+					str = str.slice(0, 7);
 				}
 				
 				if(str.length == 4){
-					subStr = str.slice(0, 1);
-					subStr += " ";
-					subStr += str.slice(1);
+					string = str.slice(0, 1);
+					string += " ";
+					string += str.slice(1);
 				}else if(str.length == 5){
-					
+					string = str.slice(0, 2);
+					string += " ";
+					string += str.slice(2);
 				}else if(str.length == 6){
-					
+					string = str.slice(0, 3);
+					string += " ";
+					string += str.slice(3);
 				}else if(str.length == 7){
-					
+					string = str.slice(0, 1);
+					string += " ";
+					string += str.slice(1, 4);
+					string += " ";
+					string += str.slice(4);
+				}else{
+					string = str;
 				}
+				
+				return string;
 			}
 			
 			return subStr;

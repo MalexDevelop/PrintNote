@@ -7,12 +7,14 @@ package node.sector_2
 	import node.Node;
 	import node.sector_2.nodes.Node_2_1;
 	import node.sector_2.nodes.Node_2_2;
+	import node.sector_2.nodes.Node_2_3;
 	
 	
 	public class Sector_2 extends Node
 	{
 		private var _node_2_1:Box;
 		private var _node_2_2:Box;
+		private var _node_2_3:Box;
 		
 		public function Sector_2()
 		{
@@ -40,11 +42,16 @@ package node.sector_2
 			_node_2_1.y = 18;
 			addChild(_node_2_1);
 			
-			/** Сумка опломбована пломбіром № */
+			/** Сумма/Загальна */
 			_node_2_2 = new Node_2_2();
-			_node_2_2.x = 10;
+			_node_2_2.x = 10; 
 			_node_2_2.y = _node_2_1.y + _node_2_1.height;
 			addChild(_node_2_2);
+			
+			_node_2_3 = new Node_2_3();
+			_node_2_3.x = 10; 
+			_node_2_3.y = _node_2_2.y + _node_2_2.height + 10;
+			addChild(_node_2_3);
 		}
 	}
 }

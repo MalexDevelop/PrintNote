@@ -561,7 +561,6 @@ package utils
 			if(str.length > 7){
 				convertNote(str.slice(0, 7));
 			}
-		
 			
 			return _string;
 		}
