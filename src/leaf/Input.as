@@ -139,6 +139,8 @@ package leaf
 			}else{
 				_textField.text = text;
 			}
+			/**/
+			//_textField.text = text;
 		}
 	}
 }
