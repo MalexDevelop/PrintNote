@@ -46,28 +46,34 @@ package utils
 			
 			if(str.length == 2)
 			{
-				if(str.search("1") == 0){
-					if(str.slice(0) == "10"){
+				
+				var number:int = int(str.slice(0, 1)); // x-
+				var number_2:int = int(str.slice(1));  // -x
+				
+				// ДЕСЯТЫЕ
+				if(number == 1){
+					if(number_2 == 0){
 						_string = tens[0];
+					}else{
+						for(var d:int = 0; d < twoTen.length; d++){
+							if(number_2 == (d + 1)){
+								_string = twoTen[d];
+							}
+						}
 					}
-					for(var k:int = 0; k < twoTen.length; k++){
-						if(str == ("1" + String(k + 1))){
-							_string = twoTen[k];
+				}else{ // ДЕСЯТЫЕ ТЫСЯЧИ от 20 - 90
+					for(var d2:int = 1; d2 <= tens.length; d2++){
+						if(number == (d2 + 1)){
+							_string = tens[d2];
 						}
 					}
 				}
-				var index:int = int(str.slice(0, 1));
-				if(index >= 2){
-					for(var j:int = 1; j <= tens.length; j++){
-						if(str.search(j + 1) == 0){
-							_string = tens[j];
-							for(var s:int = 0; s < scalar.length; s++){
-								var index_1:int = str.indexOf(String(s + 1), 1)
-								if(index_1 == str.length - 1){
-									_string += " ";
-									_string += scalar[s];
-								}
-							}
+				
+				// НАТУРАЛЬНЫЕ от 1 - 9
+				if(number > 1 || number_2 > 0){
+					for(var d3:int = 0; d3 < scalar.length; d3++){
+						if(number_2 == (d3 + 1)){
+							_string += scalar[d3];
 						}
 					}
 				}
