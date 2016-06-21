@@ -22,7 +22,7 @@ package leaf
 		 * @param text Текстовая метка
 		 * @param width Ширина объекта
 		 * @param height Высота объекта
-		 * @param bold Жирное начертание текстовой метки. По умолчаню false.
+		 * @param border Рамка вокруг объекта. По умолчаню false.
 		 */
 		public function Title(text:String, width:Number, height:Number, border:Boolean = false)
 		{

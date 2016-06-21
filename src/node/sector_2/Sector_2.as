@@ -26,7 +26,7 @@ package node.sector_2
 		{
 			// Размеры объекты
 			this.width = 170;
-			this.height = 360;
+			this.height = 350;
 			
 			// границы объекта / ВРЕМЕННЫЙ ДЕКОР!!!!!!
 			this.graphics.beginFill(0x00FF00, .07);
