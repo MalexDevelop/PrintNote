@@ -57,7 +57,7 @@ package node.sector_1.nodes
 			this.width = 265;
 			this.height = 69; // 35 + 17 + 17 = 69
 			
-			// Загловок
+			// Супровідна відомість до сумки з готівкою №
 			var headerString:String = TextValue.getInstance().getArray()[0][0];
 			var headerFormat:Format = new FormatHeader();
 			_titleField = new Title(headerString, this.width, 18, Border.status);
@@ -75,7 +75,7 @@ package node.sector_1.nodes
 			_inputField.setTextFormat(inputFormat.textFormat);
 			addChild(_inputField);
 			
-			// Подстрока
+			// (дата заповнення)
 			var subString:String = TextValue.getInstance().getArray()[0][1];
 			var subFormat:Format = new FormatSubstring();
 			var _subTitleField:Title = new Title(subString, 89, 17, Border.status);

@@ -16,8 +16,8 @@ package node.sector_3
 		override protected function init():void
 		{
 			// Размеры объекты
-			this.width = 170;
-			this.height = 350;
+			this.width = 425;
+			this.height = 200;
 			
 			// границы объекта / ВРЕМЕННЫЙ ДЕКОР!!!!!!
 			this.graphics.beginFill(0x0000FF, .07);

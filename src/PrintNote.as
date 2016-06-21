@@ -27,7 +27,6 @@ package
 	import utils.XMLLoader;
 	
 	[SWF(backgroundColor = "#666666", frameRate = "30", width = "860", height = "972")]
-	//[SWF(backgroundColor = "#5C6F91", frameRate = "30", widthPercent = 50, heightPercent = 80)]
 	
 	public class PrintNote extends Sprite
 	{
