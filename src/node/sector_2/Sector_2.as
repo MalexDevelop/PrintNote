@@ -48,7 +48,7 @@ package node.sector_2
 			_node_2_2.y = _node_2_1.y + _node_2_1.height;
 			addChild(_node_2_2);
 			
-			/** Сумма/Код/Вид операції/Призначення платежу */
+			/** Сумма/Код/Вид операції/Призначення платежу ***/
 			_node_2_3 = new Node_2_3();
 			_node_2_3.x = 10; 
 			_node_2_3.y = _node_2_2.y + _node_2_2.height + 10;
