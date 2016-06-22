@@ -44,7 +44,7 @@ package node.sector_2.nodes
 			// Редактируемое поле
 			var inputFormat:Format = new FormatInputField();
 			_inputField = new Input(35, 17, Border.status);
-			_inputField.isRestrict = true;
+			_inputField.setRestrict(true, "0-9");
 			_inputField.setUtils(_model);
 			_inputField.x = _titleField.width;
 			_inputField.y = _titleField.height - _inputField.height - 5;

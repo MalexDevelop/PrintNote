@@ -62,7 +62,7 @@ package node.sector_1.nodes
 			var inputFormat:Format = new FormatInputField();
 			_inputField = new Input(width - _titleField.width, 36, Border.status);
 			_inputField.textField.wordWrap = true;
-			_inputField.isRestrict = true;
+			_inputField.setRestrict(true, "0-9,");
 			_inputField.setUtils(_model, _controller);
 			_inputField.x = _titleField.width;
 			_inputField.y = 0;

@@ -93,7 +93,7 @@ package node.sector_1
 			var inputFormat:Format = new FormatInputField();
 			inputFormat.textFormat.align = TextFormatAlign.CENTER;
 			_inputField_1 = new Input(93, 42, true);
-			_inputField_1.isRestrict = true;
+			_inputField_1.setRestrict(true, "0-9");
 			_inputField_1.setUtils(_inputField_1_Model);
 			_inputField_1.x = width - _inputField_1.width;
 			_inputField_1.y = 0;

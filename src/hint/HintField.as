@@ -25,8 +25,6 @@ package hint
 		/** Координаты добавления объекта в список отображаения */
 		private var _point:Point = new Point();
 		
-		/** Воод только цыфр */
-		private var inputDigit:String = "0-9,";
 		/** Ввод всех символов */
 		private var inputLetter:String = null;
 		
@@ -73,7 +71,7 @@ package hint
 			_parent = parent;
 			
 			if(_parent.isRestrict){
-				setRestrict(inputDigit);
+				setRestrict(_parent.restrict);
 			}else{
 				setRestrict(inputLetter);
 			}

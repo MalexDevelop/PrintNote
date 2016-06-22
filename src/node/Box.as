@@ -28,9 +28,9 @@ package node
 		{
 			return _inputField.isRestrict;
 		}
-		public function set isRestrict(value:Boolean):void
+		public function setRestrict(value:Boolean, restrict:String):void
 		{
-			_inputField.isRestrict = value;
+		
 		}
 	}
 }

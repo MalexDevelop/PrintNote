@@ -27,6 +27,8 @@ package leaf
 		protected var _model:Model;
 		/** Контроллер */
 		protected var _controller:Controller;
+		protected var _restrict:String;
+		
 		
 		/**
 		 * Создает Динмическое текстовое поле
@@ -121,9 +123,16 @@ package leaf
 		{
 			return _isRestrict;
 		}
-		public function set isRestrict(value:Boolean):void
+		public function setRestrict(value:Boolean, restrict:String):void
 		{
 			_isRestrict = value;
+			_restrict = restrict;
+		}
+		
+		/** Возвращает ограничивающую вводе строку */
+		public function get restrict():String
+		{
+			return _restrict;
 		}
 		
 		//******************************************************
@@ -139,8 +148,6 @@ package leaf
 			}else{
 				_textField.text = text;
 			}
-			/**/
-			//_textField.text = text;
 		}
 	}
 }

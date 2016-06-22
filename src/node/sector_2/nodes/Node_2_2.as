@@ -60,7 +60,7 @@ package node.sector_2.nodes
 			var inputFormat:Format = new FormatInputField();
 			_inputField = new Input(width, 50, Border.status);
 			_inputField.name = "sumField";
-			_inputField.isRestrict = true;
+			_inputField.setRestrict(true, "0-9,");
 			_inputField.setUtils(_model, _controller);
 			_inputField.x = 0;
 			_inputField.y = _titleField.height + 5;
