@@ -29,9 +29,9 @@ package node.sector_2
 			this.height = 350;
 			
 			// границы объекта / ВРЕМЕННЫЙ ДЕКОР!!!!!!
-			/*this.graphics.beginFill(0x00FF00, .07);
+			this.graphics.beginFill(0x00FF00, .07);
 			this.graphics.drawRect(0, 0, width, height);
-			this.graphics.endFill();*/
+			this.graphics.endFill();
 		}
 		
 		protected function addNodes():void

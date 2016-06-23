@@ -31,7 +31,7 @@ package node.sector_3
 		{
 			// Размеры объекты
 			this.width = 350;
-			this.height = 200;
+			this.height = 183;
 			
 			// границы объекта / ВРЕМЕННЫЙ ДЕКОР!!!!!!
 			this.graphics.beginFill(0x0000FF, .07);

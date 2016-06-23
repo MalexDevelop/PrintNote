@@ -76,9 +76,9 @@ package node.sector_1
 			_inputField_1_Model = InputField_1_Model.getModel();
 			
 			// границы объекта / ВРЕМЕННЫЙ ДЕКОР!!!!!!
-			/*this.graphics.beginFill(0xFF0000, .07);
+			this.graphics.beginFill(0xFF0000, .07);
 			this.graphics.drawRect(0, 0, width, height);
-			this.graphics.endFill();*/
+			this.graphics.endFill();
 		}
 		
 		protected function addNodes():void
