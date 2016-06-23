@@ -36,8 +36,6 @@ package node.sector_1.nodes
 			// Моdel
 			_model = Node_1_2_Model.getModel();
 			
-			// Controller
-			
 			// Размеры объекта
 			this.width = 92;
 			this.height = Value.heightSize;

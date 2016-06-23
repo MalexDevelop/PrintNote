@@ -3,17 +3,22 @@
  */
 package node.sector_3.nodes
 {
-	import node.Box;
-	import mvc.models.Node_3_1_Model;
-	import mvc.models.Model;
+	import flash.text.TextFormatAlign;
+	
 	import form.Format;
 	import form.FormatHeader;
-	import value.TextValue;
-	import leaf.Title;
 	import form.FormatInputField;
-	import leaf.Input;
-	import flash.text.TextFormatAlign;
 	import form.FormatSubstring;
+	
+	import leaf.Input;
+	import leaf.Title;
+	
+	import mvc.models.Model;
+	import mvc.models.Node_3_1_Model;
+	
+	import node.Box;
+	
+	import value.TextValue;
 	
 	public class Node_3_1 extends Box
 	{
@@ -31,7 +36,7 @@ package node.sector_3.nodes
 			_model = Node_3_1_Model.getModel();
 			
 			// Размеры объекта
-			this.width = 127;
+			this.width = 128;
 			this.height = 35; // 18 + 17 = 35
 			
 			// Акт

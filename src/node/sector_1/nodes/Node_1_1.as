@@ -61,7 +61,6 @@ package node.sector_1.nodes
 			var headerString:String = TextValue.getInstance().getArray()[0][0];
 			var headerFormat:Format = new FormatHeader();
 			_titleField = new Title(headerString, this.width, 18, Border.status);
-			_titleField.textField.wordWrap = true;
 			_titleField.setTextFormat(headerFormat.textFormat);
 			addChild(_titleField);
 			

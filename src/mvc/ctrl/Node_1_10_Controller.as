@@ -25,7 +25,7 @@ package mvc.ctrl
 		private var _kopeks:String = "";
 		private var _kopekStr:String = " коп.";
 		/** Грн */
-		private var _noteStr:String = " грн";
+		private var _noteStr:String = " грн.";
 		
 		 //***********************************************
 		 //
