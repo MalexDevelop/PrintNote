@@ -32,7 +32,6 @@ package leaf
 		
 		/**
 		 * Создает Динмическое текстовое поле
-		 * @param text Текст
 		 * @param width Ширина объекта
 		 * @param height Высота объекта
 		 * @param border Pамка вокруг объекта

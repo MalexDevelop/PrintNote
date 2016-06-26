@@ -23,8 +23,6 @@ package node.sector_1.nodes
 	{
 		/** Модель */
 		protected var _model:Model;
-		/** Контроллер */
-		//protected var _controller:IController;
 		
 		public function Node_1_2()
 		{

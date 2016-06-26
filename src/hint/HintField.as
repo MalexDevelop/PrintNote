@@ -109,7 +109,7 @@ package hint
 			}
 			
 			this.x = _point.x;
-			this.y = _point.y;
+			this.y = _point.y - 5;
 			
 			_parent.stage.addChild(this);
 		}

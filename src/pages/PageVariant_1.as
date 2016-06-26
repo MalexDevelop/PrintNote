@@ -48,7 +48,7 @@ package pages
 			
 			_sector_5 = new Sector_5();
 			_sector_5.x = 0;
-			_sector_5.y =_sector_4.y + _sector_4.height;
+			_sector_5.y =_sector_4.y + _sector_4.height + 12;
 			addChild(_sector_5);
 		}
 	}

@@ -84,8 +84,7 @@
 		<box id = "27">10 коп.</box>
 		<box id = "28">25 коп.</box>
 		<box id = "29">50 коп.</box>
-		<box id = "30">Усього</box>
-		<box id = "31">Усього</box>
+		<box id = "30">Усього:</box>
 	</sector>
 	
 	<sector id = "6">

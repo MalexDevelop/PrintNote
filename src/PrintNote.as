@@ -260,7 +260,7 @@ package
 		protected function clickHandler(e:MouseEvent):void
 		{
 			if(e.target.parent is Input){
-				if(e.target.parent.name != "sumField"){
+				if(e.target.parent.name != "sumField" && e.target.parent.name != "sumField2"){
 					_hint.toShow(e.target.parent as Input);
 				}
 			}
@@ -277,26 +277,74 @@ package
 		 */		
 		private function btnPrintClickHandler(e:MouseEvent):void
 		{
-			if (_printJob.start())
+			if(checkBox_1.pressed || checkBox_2.pressed || checkBox_3.pressed)
 			{
-				//myPrintJob.addPage(mySprite); //если требутется распечатать несколько страниц, вызываем myPrintJob.addPage(страница для печати) друг за другом.
-				
-				/*_printSprite_1.scaleX = 1;
-				_printSprite_1.scaleY = 1;*/
-				
-				try
+				if (_printJob.start())
 				{
-					_printJob.addPage(_printSprite_1);
+					// page 1
+					page_1.scaleX = .86;
+					page_1.scaleY = .86;
+					var paddingLeft:Number = (_printSprite_1.width - page_1.width) / 2;
+					var paddingTop:Number = (_printSprite_1.height - page_1.height) / 2;
+					page_1.x = paddingLeft;
+					page_1.y = paddingTop;
+					
+					// page 2
+					page_2.scaleX = .86;
+					page_2.scaleY = .86;
+					page_2.x = paddingLeft;
+					page_2.y = paddingTop;
+					
+					// page 3
+					page_3.scaleX = .86;
+					page_3.scaleY = .86;
+					page_3.x = paddingLeft;
+					page_3.y = paddingTop;
+					
+					try
+					{
+						if(checkBox_1.pressed){
+							_printJob.addPage(_printSprite_1);
+						}
+						
+						if(checkBox_2.pressed){
+							_printJob.addPage(_printSprite_2);
+						}
+						
+						if(checkBox_3.pressed){
+							_printJob.addPage(_printSprite_3);
+						}
+					}
+					catch (error:Error)
+					{
+						trace("Ошибка печати!");
+					}
+					finally
+					{
+						// page 1
+						page_1.scaleX = 1;
+						page_1.scaleY = 1;
+						page_1.x = 0;
+						page_1.y = 0;
+						
+						// page 2
+						page_2.scaleX = 1;
+						page_2.scaleY = 1;
+						page_2.x = 0;
+						page_2.y = 0;
+						
+						// page 3
+						page_2.scaleX = 1;
+						page_2.scaleY = 1;
+						page_2.x = 0;
+						page_2.y = 0;
+					}
+					_printJob.send();
 				}
-				catch (error:Error)
+				else
 				{
-					trace("Ошибка печати!");
+					trace("Печать файла была отменета пользователем!");
 				}
-				_printJob.send();
-			}
-			else
-			{
-				trace("Печать файла была отменета пользователем!");
 			}
 		}
 		
